@@ -23,17 +23,15 @@ cursive; */
 }
 
 .header-nav{
-  width: 30%;
+  width: 40%;
 }
 
 .header-nav--list{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.header-nav--item:not(last-child){
-  margin-right: 20px;
-}
+/* ↑li要素の右側marginではなく、justify-contentで配置 */
 
 .header-nav--item--link{
   text-decoration: none;
@@ -384,9 +382,11 @@ cursive; */
 }
 
 .post-wrapper {
+  width: 100%;
   margin: 80px 0 0 0;
   /* section間の間隔の基準値。中央よせでない場合はautoは不要 */
   display: flex;
+  justify-content: center;
 }
 
 .post-wrapper--contents{
@@ -395,8 +395,10 @@ cursive; */
   position: relative;
 }
 
-.psot-wrapper--contents img{
+/* ↓psot~とのタイポ修正 */
+.post-wrapper--contents img{
   width: 100%;
+  display: inline-block;
 }
 
 .post-wrapper--contents__link{
